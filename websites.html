@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalaxyVerse</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+            background-color: white; /* Default light mode background */
+            color: black; /* Default light mode text color */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .menu {
+            display: flex;
+        }
+
+        .navbar button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 10px; /* Optional: Rounded corners */
+        }
+
+        .navbar button:hover {
+            background-color: #777;
+        }
+
+        #toggleButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #toggleButton:hover {
+            background-color: #777;
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212; /* Dark background */
+            color: white; /* Light text color */
+        }
+
+        .navbar.dark-mode {
+            background-color: #1e1e1e; /* Dark navbar background */
+        }
+
+        /* Add dark mode styles for buttons if needed */
+    </style>
+</head>
+<body>
+
+        <div class="navbar">
+        <div class="logo"><p style="color:purple;">🌌GalaxyVerse🌌</p></div>
+        <div class="menu">
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/homepage.html'">Home</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/about.html'">About</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/websites.html'">Websites</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/status_page.html'">Status Page</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/settings.html'">Settings</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/updatelog.html'">Update Log</button>        
+        </div>
+    </div>
+
+</body>
+</html>
+<br>
+<h1>🌌GalaxyVerse🌌</h1>
+<br>
+<br>
+<h2>⬇NEW⬇(expire-11/25/24)</h2>
+<li><a href="https://geography-lesson-10.org/">geography-10</a>
+<h2>⬇WEBSITES⬇</h2>
+<li><a href="https://outred.org/g/index.html">outref</a>
+<li><a href="https://randon.games/">randon-games</a>
+<li><a href="https://geometryspot.com/activities/">geometryspot</a>
+<li><a href="https://doodle-pile.gitlab.io/">doodle-pile</a>
+<li><a href="https://ixlmathwork.co">ixlmathwork</a>
+<li><a href="https://pinball.flutter.dev/">pinball</a>
+<li><a href="https://class-math.biz/">classmath</a>
+<li><a href="https://geography-lesson-4.org/">geography</a>
+<h2>⬇Infinite Craft⬇</h2>
+<li><a href="https://infinite-craft.org">infinite-craft 1</a>
+<li><a href="https://infinitecraftrecipes.io/">infinite-craft 2</a>
+<h2>⬇Math Is Fun⬇</h2>
+<li><a href="https://nomoregames.jamesonlee.com/">nomoregames</a>
+<li><a href="https://schoolregulations.jamesonlee.com/">regulations</a>
+<li><a href="https://linewizeschoology.twilightparadox.com/">linewize 1</a>
+<li><a href="https://linewizeissuperfun.twilightparadox.com/">linewize 2</a>
+<li><a href="https://linewizeisfuntouse.twilightparadox.com/">lineiwze 3</a>
+<li><a href="https://schoolwork-helpyes.uk.to/">schoolwork</a>
+<li><a href="https://coolio.fr.to/">coolio</a>
+<br>
+<br>
+<h5>
+
+    <button id="toggleButton">Toggle Dark Mode</button>
+
+    <script>
+        // Check for saved theme in localStorage
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.querySelector('.navbar').classList.add('dark-mode');
+        }
+
+        // Dark mode toggle function
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.navbar').classList.toggle('dark-mode');
+
+            // Save the current theme in localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+
+</body>
+</html>
