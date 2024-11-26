@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GalaxyVerse</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+            background-color: white; /* Default light mode background */
+            color: black; /* Default light mode text color */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .menu {
+            display: flex;
+        }
+
+        .navbar button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 10px; /* Optional: Rounded corners */
+        }
+
+        .navbar button:hover {
+            background-color: #777;
+        }
+
+        #toggleButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #toggleButton:hover {
+            background-color: #777;
+        }
+
+        /* Social Links Styles */
+        .social-button {
+            margin: 20px; /* Space from other elements */
+            padding: 10px 20px;
+            background-color: #000000; /* Button color */
+            color: white; /* Button text color */
+            border: none; /* No border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        .social-button:hover {
+            background-color: #3e3e3e; /* Darker blue on hover */
+        }
+
+        .social-links {
+            display: none; /* Initially hidden */
+            margin-top: 10px; /* Space above the links */
+            padding: 10px;
+            border: 1px solid #000000; /* Border color */
+            border-radius: 5px; /* Rounded corners */
+            background-color: white; /* Background color for the links */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .social-links a {
+            display: block; /* Block display for links */
+            color: #000000; /* Link color */
+            text-decoration: none; /* No underline */
+            margin: 5px 0; /* Space between links */
+            transition: color 0.3s; /* Smooth transition */
+        }
+
+        .social-links a:hover {
+            color: #4e4e4e; /* Darker link color on hover */
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #121212; /* Dark background */
+            color: white; /* Light text color */
+        }
+
+        .navbar.dark-mode {
+            background-color: #1E1E1E; /* Dark navbar background */
+        }
+
+        /* Add dark mode styles for buttons if needed */
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo"><p style="color:purple;">🌌GalaxyVerse🌌</p></div>
+        <div class="menu">
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/homepage.html'">Home</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/about.html'">About</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/websites.html'">Websites</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/status_page.html'">Status Page</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/settings.html'">Settings</button>
+            <button onclick="window.location.href='https://galaxyverse.w3spaces.com/updatelog.html'">Update Log</button>        
+        </div>
+    </div>
+
+    <h1>🌌GalaxyVerse🌌</h1>
+    <h4>GalaxyVerse is the best website to cure your boredom at school. This website has many features to cure your boredom but just don't get caught. This website also has many popular game websites. Updates come very often. This website is built very weakly but it kinda does the job soon there will be mini games on the homepage</h4>
+    <br>
+    <br>
+<h3> Word from the owner: I am gonna try to make profit from this so I can have more websites be added because the provider I am using gives me small space and data so its hard to use</h3>
+    <br>
+    <br>
+<center><b><div>The team:
+<br>
+<br>
+<center>| Owner |
+<br>👑Creator | aanzo (those who know💀)
+<br>
+<br>
+<center>| Developers |
+<br>🛠Developer | lucaspoopypants
+<br>
+<br>| Contributors |
+<br>🌌GalaxyMembers | David
+<br>🌌GalaxyMembers | Zayden
+<br>🎃Pumpkin | ariansmartboi
+</b></div>
+<br>
+
+    <button id="toggleButton">Toggle Dark Mode</button>
+
+    <!-- Social Links Section -->
+    <button class="social-button" id="socialToggleButton">Social Links</button>
+    <div class="social-links" id="socialLinks">
+        <a href="https://www.twitter.com/@_aanzo" target="_blank">Twitter</a>
+        <a href="https://www.youtube.com/aanzo" target="_blank">Youtube</a>
+    </div>
+
+    <script>
+        // Check for saved theme in localStorage
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+            document.querySelector('.navbar').classList.add('dark-mode');
+        }
+
+        // Dark mode toggle function
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.navbar').classList.toggle('dark-mode');
+
+            // Save the current theme in localStorage
+            if (document.body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Toggle social links visibility
+        document.getElementById('socialToggleButton').addEventListener('click', function() {
+            const socialLinks = document.getElementById('socialLinks');
+            if (socialLinks.style.display === "none" || socialLinks.style.display === "") {
+                socialLinks.style.display = "block"; // Show links
+            } else {
+                socialLinks.style.display = "none"; // Hide links
+            }
+        });
+    </script>
+
+</body>
+</html>
