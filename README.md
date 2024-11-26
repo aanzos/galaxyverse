@@ -17,3 +17,9 @@ We have made this website because for us school is boring so we wanted to help o
 - And many more amazing features
 
 PLease feel free to support the websites by buying the GalaxyVerse Plus access (Coming soon)
+
+
+whatever this is 
+````
+git@github.com:aanzos/galaxyverse.git
+````
